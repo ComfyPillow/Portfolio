@@ -1,0 +1,231 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Montserrat|Open+Sans:800,700);
+
+/* Shared CSS */
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 48px;
+}
+
+h3 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	margin-left: .25em;
+	margin-top: 0;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	background-color: #f4f4f4;
+	padding: 1.5em;
+	padding-top: 1.2em;
+	padding-left: 3em;
+	opacity: .9;
+}
+
+#copyright {
+	color: #9c9c9c;
+	float: right;
+	margin-right: 12%;
+	margin-top: 4em;
+	margin-bottom: 3em;
+}
+
+#home, #projects, #contact {
+	margin-left: 12%;
+	margin-right: 12%;
+}
+
+#pageView {
+	padding-top: 4.2em;
+}
+
+
+.tab, .tab:link, .tab:visited {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	color: #9c9c9c;
+	border-color : rgb(211, 211, 211);
+	margin-right: 3em;
+	width: 7em;
+}
+
+.tab:hover, .tab:active {
+	color: #222222;
+	text-decoration: none;
+	-moz-transition:color .5s ease-in;
+    -o-transition:color .5s ease-in;
+    -webkit-transition:color .5s ease-in;
+}
+
+ 
+/* Contact CSS */
+#contact {
+	padding-top: 4em;
+}
+
+#contact p {
+	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+	padding-right: 2em;
+	width: 50%;
+}
+
+#contact #collab { 
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	margin-top: 4em;
+}
+
+#contact #email, #contact #linked, #contact #facebook {
+	margin-top: 3em;
+	width: 40px;
+	height: auto;
+	margin-right: 1em;
+}
+
+#contact #facebook {
+	width: 40px;
+}
+
+#contact #linked{
+	width: 35px;
+}
+
+#contact #research {
+	margin-top: 2em;
+	margin-bottom: 5em;
+	width: 50%;
+	float: right;
+}
+
+/* Home CSS */
+
+#home {
+	margin-top: 0;
+	padding-bottom: 5em;
+}
+
+#home #aboutMeStart {
+	padding-top: 3em;
+}
+
+#home #me {
+	float: right;
+	width: 325px;
+	height: auto;
+	margin-left: 5em;
+	margin-top: 2em;
+}
+
+#home #splash {
+	width: 100%;
+	margin-bottom: 5em;
+	margin-top: 1em;
+}
+
+#home .aboutMe {
+	padding-top: 2em;
+}
+
+#home .skills {
+	background-color: #9c9c9c;
+	border-radius: .25em;
+	color: #313131;
+	padding: .4em;
+	padding-left: .5em;
+	margin-right: .5em;
+}
+
+/* Interest CSS */
+
+#interests .interestDesc {
+	padding-top: 2em;
+	padding-left: 3em;
+	padding-right: 3em;
+}
+
+/* Projects CSS */
+#projects {
+	padding-top: 4em;
+}
+
+/* ============================================================
+  Parallax Effect for Interests Page
+============================================================ */
+.container {
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0;
+  overflow : hidden;
+}
+/* ============================================================
+  SECTIONS
+============================================================ */
+section.module:last-child {
+  margin-bottom: 0;
+}
+section.module h2 {
+  margin-left: 5em;
+  margin-bottom: 20px;
+  font-family: "Open Sans", serif;
+  font-size: 30px;
+}
+section.module p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+section.module p:last-child {
+  margin-bottom: 0;
+}
+section.module.content {
+  padding: 40px 0;
+}
+section.module.parallax {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+section.module.parallax h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 48px;
+  line-height: 600px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+section.module.parallax-1 {
+  background-image: url("../img/interests/SanMarcoSquare.jpg");
+}
+section.module.parallax-2 {
+  background-image: url("../img/interests/Food.jpg");
+}
+section.module.parallax-3 {
+  background-image: url("../img/interests/destiny.jpg");
+}
+section.module.parallax-4 {
+ background-image: url("../img/interests/animeclub.jpg");
+}
+
+@media all and (min-width: 600px) {
+  section.module h2 {
+    font-size: 42px;
+  }
+  section.module p {
+    font-size: 20px;
+  }
+  section.module.parallax h1 {
+    font-size: 96px;
+  }
+}
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 160px;
+  }
+}
