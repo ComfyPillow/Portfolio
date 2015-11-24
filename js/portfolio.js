@@ -6,25 +6,25 @@ app.config(function($stateProvider) {
   $stateProvider
   		.state('home', { // Landing page
 				url:'/home',
-			    templateUrl: 'Portfolio/templates/home.html', // HTML fragment
+			    templateUrl: 'templates/home.html', // HTML fragment
 		   	    controller: 'HomeController', // Which controller 
 		})
 
 		.state('projects', { 
 				url:'/projects',
-			    templateUrl: 'Portfolio/templates/projects.html', // HTML fragment
+			    templateUrl: 'templates/projects.html', // HTML fragment
 		   	    controller: 'ProjectsController', // Which controller 
 		})
 
 		.state('interests', { 
 				url:'/interests',
-			    templateUrl: 'Portfolio/templates/interests.html', // HTML fragment
+			    templateUrl: 'templates/interests.html', // HTML fragment
 		   	    controller: 'InterestsController', // Which controller 
 		})
 
 		.state('contact', { 
 				url:'/contact',
-			    templateUrl: 'Portfolio/templates/contact.html', // HTML fragment
+			    templateUrl: 'templates/contact.html', // HTML fragment
 		   	    controller: 'ContactController', // Which controller 
 		})
 })
