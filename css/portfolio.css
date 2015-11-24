@@ -1,6 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Montserrat|Open+Sans:800,700);
 
 /* Shared CSS */
+a:-webkit-any-link {
+	text-decoration: none;
+}
 
 h1 {
 	font-family: 'Montserrat', sans-serif;
@@ -21,6 +24,7 @@ header {
 	padding-top: 1.2em;
 	padding-left: 3em;
 	opacity: .9;
+	z-index: 5;
 }
 
 #copyright {
@@ -75,7 +79,7 @@ header {
 #contact #collab { 
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
-	margin-top: 4em;
+	margin-top: 5em;
 }
 
 #contact #email, #contact #linked, #contact #facebook {
@@ -94,7 +98,7 @@ header {
 }
 
 #contact #research {
-	margin-top: 2em;
+	margin-top: 1em;
 	margin-bottom: 5em;
 	width: 50%;
 	float: right;
@@ -149,6 +153,56 @@ header {
 /* Projects CSS */
 #projects {
 	padding-top: 4em;
+}
+
+#projects .projectSamples {
+	font-family: "Open Sans", sans-serif;
+	float: left;
+	margin-top: 5em;
+	margin-bottom: 5em;
+	margin-right: 8em;
+	position: relative;
+}
+
+#projects .projectImages, #projects .projectSamples {
+	width: 400px;
+	height: auto;
+	position: absolute;
+	z-index: 1;
+}
+
+#projects .overlay {
+	font-size: 18px;
+	text-align: center;
+	width: 400px;
+	height: 208px;
+	padding: 1em;
+	padding-top: 2em ;
+	position: relative;
+	z-index: 2;
+	opacity: 0;
+}
+
+#projects .overlay:hover  {
+	opacity: 1;
+	background-color: rgba(211, 211, 211, .6);
+	-moz-transition:opacity .3s ease-in;
+    -o-transition:opacity .3s ease-in;
+    -webkit-transition:opacity .3s ease-in;
+}
+
+#projects .overlay:hover, #projects .overlay:link, #projects .overlay:active, #projects .overlay:visited{
+	color: #1a1a1a;
+}
+
+.projectSamples h3, .projectSamples p {
+	text-align: center;
+}
+
+.projectSamples p {
+	padding-top: 1em;
+	font-size: 12px;
+	color: rgba(49,49,49, .8);
 }
 
 /* ============================================================

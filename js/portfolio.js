@@ -35,31 +35,45 @@ app.config(function($stateProvider) {
 
 .controller('ProjectsController', function($scope){
    $scope.about = "Here's some information about my projects."
- })
+})
 
 .controller('InterestsController', function($scope){
- })
+})
 
 .controller('ContactController', function($scope){
    $scope.url = "https://www.linkedin.com/profile/view?id=AAIAAAlnLK4BKmQ8TxTYs2dJ2WbRbEGNV6s4sfc&trk=nav_responsive_tab_profile_pic"
- })
+})
 
 //Gets project JSON data for display on Projects page
-
 .controller("GetProjects", function($scope, $http) {
   $http.get('js/projects.json').
     success(function(data, status, headers, config) {
-    	console.log(data);
-    	$scope.projects = data;
-      	$scope.names = data.name;
-    	$scope.urls = data.url;
-    	$scope.images = data.image;
-    	$scope.descs = data.description;
+    	$scope.projects = data.projects;
     }).
     error(function(data, status, headers, config) {
       console.log("Failure");
     });
+})
+
+//For link highlighting and fade
+.controller("linkHighlight", function($scope){
+	$scope.highlight = function(link) {
+		var a = $(".tab");
+		    for(var i=0;i<a.length;i++){
+		        if((link + "Link") == a[i].id){
+		            $(a[i]).css("color","#222222");
+		        } else {
+		        	$(a[i]).css("color", "#9c9c9c");
+		        	$(a[i]).css("-moz-transition", "color .6s ease-in");
+		        	$(a[i]).css("-o-transition", "color .6s ease-in");
+		        	$(a[i]).css("-webkit-transition", "color .6s ease-in");
+		        }
+		    }
+	}
 });
+
+
+
 
 
 

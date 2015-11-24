@@ -2,6 +2,15 @@
 	<h1>George Ng </h1>
 	<h3>Front-End Web Developer </h3>
 
-	<p ng-repeat="name in names" class="names"> {{name[0]}} test</p>
+	<div ng-repeat="project in projects" class="projectSamples" style="position: relative;">
+	  <h3>{{project.name}}</h3>
+	  <a href="{{project.url}}">
+	  	<img ng-src="{{project.image}}" class="projectImages" style="position: absolute;" /> 
+	  	<div class="overlay">
+	  		<span>{{project.description}}</span>
+	  		<p> Click to View </p>
+	  	</div>
+	  </a>
+	</div>
 
 </div> 

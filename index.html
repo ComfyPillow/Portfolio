@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
 
-    <!-- Add ui-router library here -->
+    <!-- ui-router library here -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
     
     <!-- Custom code -->
@@ -23,17 +23,17 @@
 
   <body>
     <div>
-      <header>
+      <header ng-controller="linkHighlight">
         <!-- Create links to different sections -->
-          <a ui-sref="home" class="tab">Home</a>
-          <a ui-sref="projects" class="tab">Projects</a>
-          <a ui-sref="interests" class="tab">Interests</a>
-          <a ui-sref="contact" class="tab">Contact</a>
+          <a ng-click="highlight('home')" ui-sref="home" id="homeLink" class="tab">Home</a>
+          <a ng-click="highlight('projects')" ui-sref="projects" id="projectsLink" class="tab">Experience</a>
+          <a ng-click="highlight('interests')" ui-sref="interests" id="interestsLink" class="tab">Passions</a>
+          <a ng-click="highlight('contact')" ui-sref="contact" id="contactLink" class="tab">Connect</a>
   		</header>
         
 
       <div id="pageView" class="container">
-        <!-- This is where your content will display -->
+        <!-- This is where the page contents will display -->
         <div ui-view></div>
       </div>
 
