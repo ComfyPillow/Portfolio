@@ -6,42 +6,39 @@ app.config(function($stateProvider) {
   $stateProvider
   		.state('home', { // Landing page
 				url:'/home',
-			    templateUrl: '../templates/home.html', // HTML fragment
+			    templateUrl: 'templates/home.html', // HTML fragment
 		   	    controller: 'HomeController', // Which controller 
 		})
 
-		.state('projects', { // Landing page
+		.state('projects', { 
 				url:'/projects',
-			    templateUrl: '../templates/projects.html', // HTML fragment
+			    templateUrl: 'templates/projects.html', // HTML fragment
 		   	    controller: 'ProjectsController', // Which controller 
 		})
 
-		.state('interests', { // Landing page
+		.state('interests', { 
 				url:'/interests',
-			    templateUrl: '../templates/interests.html', // HTML fragment
+			    templateUrl: 'templates/interests.html', // HTML fragment
 		   	    controller: 'InterestsController', // Which controller 
 		})
 
-		.state('contact', { // Landing page
+		.state('contact', { 
 				url:'/contact',
-			    templateUrl: '../templates/contact.html', // HTML fragment
+			    templateUrl: 'templates/contact.html', // HTML fragment
 		   	    controller: 'ContactController', // Which controller 
 		})
 })
 
 .controller('HomeController', function($scope){
-   $scope.image = "../img/"
 })
 
 .controller('ProjectsController', function($scope){
-   $scope.about = "Here's some information about my projects."
 })
 
 .controller('InterestsController', function($scope){
 })
 
 .controller('ContactController', function($scope){
-   $scope.url = "https://www.linkedin.com/profile/view?id=AAIAAAlnLK4BKmQ8TxTYs2dJ2WbRbEGNV6s4sfc&trk=nav_responsive_tab_profile_pic"
 })
 
 //Gets project JSON data for display on Projects page
@@ -72,6 +69,10 @@ app.config(function($stateProvider) {
 	}
 });
 
+//To default index to home.
+app.run(['$state', function ($state) {
+	$state.transitionTo('home');
+}]);
 
 
 
