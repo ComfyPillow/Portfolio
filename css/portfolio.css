@@ -160,13 +160,14 @@ header {
 	float: left;
 	margin-top: 5em;
 	margin-bottom: 5em;
-	margin-right: 8em;
+	margin-left: 5%;
+	margin-right: 5%;
 	position: relative;
 }
 
 #projects .projectImages, #projects .projectSamples {
 	width: 400px;
-	height: auto;
+	height: 208px;
 	position: absolute;
 	z-index: 1;
 }
