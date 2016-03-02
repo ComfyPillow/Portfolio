@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Montserrat|Open+Sans:800,700);
 
 /* Shared CSS */
-a:-webkit-any-link {
+a:-webkit-any-link, a:hover b {
 	text-decoration: none;
 }
 
@@ -109,6 +109,11 @@ header {
 	margin-bottom: 5em;
 	width: 50%;
 	float: right;
+}
+
+#contact #github {
+	width: 40px;
+	vertical-align: bottom;
 }
 
 /* Home CSS */
